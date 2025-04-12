@@ -65,7 +65,9 @@ const About = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-[#87bdd8] via-[#5c7a9e] to-[#3e5c76] opacity-30 animate-gradient-xy rounded-xl z-[-1]"></div>
           <Image src={finance} alt="finance" className="h-[100px] w-auto" />
           <div>
-            <h3 className="text-xl font-semibold text-white">Let's Connect</h3>
+            <h3 className="text-xl font-semibold text-white">
+              Let&apos;s Connect
+            </h3>
             <p className="text-white/70 mt-1 text-sm">
               Always open to internships, collaborations, and cool side
               projects. Hit me up!
