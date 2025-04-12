@@ -93,7 +93,6 @@ const Portfolio = () => {
               index % 2 === 1 ? "md:flex-row-reverse" : ""
             } gap-10 items-center`}
           >
-            {/* Text Section */}
             <div className="md:w-1/2 space-y-4">
               <h3 className="text-6xl font-bold text-white/60">{`0${
                 index + 1
@@ -123,7 +122,7 @@ const Portfolio = () => {
               </Link>
             </div>
 
-            {/* Image Section */}
+
             <div className="md:w-1/2 flex justify-center">
               <div className="relative rounded-xl overflow-hidden group border-2 border-[#87bdd8] hover:shadow-xl transition-all duration-300">
                 <Image

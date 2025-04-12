@@ -34,7 +34,6 @@ const Navbar = () => {
 
   return (
     <div className="bg-[#000] w-full z-50 shadow-md">
-      {/* Desktop Nav */}
       <div className="hidden md:flex items-center justify-center px-4 mx-auto max-w-[400px]">
         <ul className="flex flex-row p-4 space-x-8">
           {navLinks.map((link, index) => (
@@ -43,7 +42,6 @@ const Navbar = () => {
                 <p className="flex items-center justify-center text-white hover:text-[#87bdd8] transition-colors duration-300">
                   {link.title}
                 </p>
-                {/* Underline on hover */}
                 <div className="relative h-1 mt-1">
                   <div className="absolute w-2/3 h-1 transition-all duration-300 ease-out bg-[#87bdd8]/70 rounded-full group-hover:w-full"></div>
                   <div className="mt-1 absolute w-1/3 h-1 transition-all duration-300 ease-out bg-[#87bdd8] rounded-full group-hover:w-full"></div>
@@ -65,7 +63,6 @@ const Navbar = () => {
         </ul>
       </div>
 
-      {/* Mobile Menu Button */}
       <div
         onClick={toggleNav}
         className="md:hidden fixed top-5 right-5 z-50 text-white border rounded border-white/70 p-2 bg-black/40 hover:bg-white/10 transition"
@@ -73,7 +70,6 @@ const Navbar = () => {
         {nav ? <AiOutlineClose size={30} /> : <AiOutlineMenu size={30} />}
       </div>
 
-      {/* Mobile Nav Menu */}
       <motion.div
         initial={false}
         animate={nav ? "open" : "closed"}

@@ -18,7 +18,6 @@ const About = () => {
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-8 gap-8">
-        {/* Card 1 */}
         <div className="cursor-pointer relative col-span-1 md:col-span-5 group bg-white/10 border border-white/20 backdrop-blur-lg rounded-2xl p-6 flex gap-5 items-center transition hover:scale-[1.02] hover:shadow-xl">
           <div className="absolute inset-0 bg-gradient-to-r from-[#87bdd8] via-[#5c7a9e] to-[#3e5c76] opacity-30 animate-gradient-xy rounded-xl z-[-1]"></div>
           <Image src={book} alt="book" className="h-[100px] w-auto" />
@@ -33,7 +32,6 @@ const About = () => {
           </div>
         </div>
 
-        {/* Card 2 */}
         <div className="relative cursor-pointer col-span-1 md:col-span-3 group bg-white/10 border border-white/20 backdrop-blur-lg rounded-2xl p-6 flex gap-5 items-center transition hover:scale-[1.02] hover:shadow-xl">
           <div className="absolute inset-0 bg-gradient-to-r from-[#87bdd8] via-[#5c7a9e] to-[#3e5c76] opacity-30 animate-gradient-xy rounded-xl z-[-1]"></div>
           <Image src={pc} alt="pc" className="h-[100px] w-auto" />
@@ -47,7 +45,6 @@ const About = () => {
           </div>
         </div>
 
-        {/* Card 3 */}
         <div className="relative cursor-pointer col-span-1 md:col-span-3 group bg-white/10 border border-white/20 backdrop-blur-lg rounded-2xl p-6 flex gap-5 items-center transition hover:scale-[1.02] hover:shadow-xl">
           <div className="absolute inset-0 bg-gradient-to-r from-[#87bdd8] via-[#5c7a9e] to-[#3e5c76] opacity-30 animate-gradient-xy rounded-xl z-[-1]"></div>
           <Image src={card} alt="card" className="h-[100px] w-auto" />
@@ -60,7 +57,6 @@ const About = () => {
           </div>
         </div>
 
-        {/* Card 4 */}
         <div className="relative cursor-pointer col-span-1 md:col-span-5 group bg-white/10 border border-white/20 backdrop-blur-lg rounded-2xl p-6 flex gap-5 items-center transition hover:scale-[1.02] hover:shadow-xl">
           <div className="absolute inset-0 bg-gradient-to-r from-[#87bdd8] via-[#5c7a9e] to-[#3e5c76] opacity-30 animate-gradient-xy rounded-xl z-[-1]"></div>
           <Image src={finance} alt="finance" className="h-[100px] w-auto" />
