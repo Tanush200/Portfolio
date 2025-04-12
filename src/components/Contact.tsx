@@ -42,11 +42,12 @@ const Contact = () => {
 
       <div className="bg-[#87bdd8]/10 p-6 rounded-xl max-w-[500px] w-full">
         <h2 className="text-5xl font-bold text-[#87bdd8] mb-4">
-          Let's Connect
+          Let&apos;s Connect
         </h2>
         <p className="text-white/70 mb-6">Send me a message</p>
 
         <form
+        onSubmit={clearForm}
           className="space-y-4"
           action="https://getform.io/f/aejrdkxb"
           method="POST"
