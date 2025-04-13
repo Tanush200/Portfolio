@@ -4,6 +4,7 @@ import { SparklesCore } from "@/components/ui/sparkles";
 import { AnimatePresence, motion } from "motion/react";
 import { cn } from "@/lib/utils";
 import { IconDotsVertical } from "@tabler/icons-react";
+import Image from "next/image";
 
 interface CompareProps {
   firstImage?: string;
@@ -33,7 +34,6 @@ export const Compare = ({
   const [sliderXPercent, setSliderXPercent] = useState(initialSliderPercentage);
   const [isDragging, setIsDragging] = useState(false);
   const sliderRef = useRef<HTMLDivElement>(null);
-  const [isMouseOver, setIsMouseOver] = useState(false);
   const autoplayRef = useRef<NodeJS.Timeout | null>(null);
 
   const startAutoplay = useCallback(() => {
@@ -102,18 +102,16 @@ export const Compare = ({
       }}
       onMouseMove={(e) => handleMove(e.clientX)}
       onMouseLeave={() => {
-        setIsMouseOver(false);
         if (slideMode === "hover") setSliderXPercent(initialSliderPercentage);
         if (slideMode === "drag") setIsDragging(false);
         startAutoplay();
       }}
       onMouseEnter={() => {
-        setIsMouseOver(true);
         stopAutoplay();
       }}
-      onMouseDown={(e) => handleStart()}
+      onMouseDown={() => handleStart()}
       onMouseUp={() => handleEnd()}
-      onTouchStart={(e) => {
+      onTouchStart={() => {
         if (!autoplay) handleStart();
       }}
       onTouchEnd={() => {
@@ -166,9 +164,10 @@ export const Compare = ({
               }}
               transition={{ duration: 0 }}
             >
-              <img
+              <Image
                 alt="first image"
                 src={firstImage}
+                fill
                 className={cn(
                   "absolute inset-0 z-20 rounded-2xl shrink-0 w-full h-full select-none",
                   firstImageClassName

@@ -28,7 +28,7 @@ export const StarsBackground: React.FC<StarBackgroundProps> = ({
   className,
 }) => {
   const [stars, setStars] = useState<StarProps[]>([]);
-  const canvasRef = useRef<HTMLCanvasElement | null>(null); // ✅ Corrected
+  const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   const generateStars = useCallback(
     (width: number, height: number): StarProps[] => {
@@ -75,13 +75,15 @@ export const StarsBackground: React.FC<StarBackgroundProps> = ({
     updateStars();
 
     const resizeObserver = new ResizeObserver(updateStars);
-    if (canvasRef.current) {
-      resizeObserver.observe(canvasRef.current);
+    const currentCanvas = canvasRef.current; // Capture the ref value
+
+    if (currentCanvas) {
+      resizeObserver.observe(currentCanvas);
     }
 
     return () => {
-      if (canvasRef.current) {
-        resizeObserver.unobserve(canvasRef.current);
+      if (currentCanvas) {
+        resizeObserver.unobserve(currentCanvas);
       }
     };
   }, [
