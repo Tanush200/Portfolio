@@ -1,5 +1,4 @@
 "use client";
-import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import cursor from "@/assets/icon1.png";
 import lightning from "@/assets/icon2.png";
@@ -49,7 +48,7 @@ const Hero = () => {
       
       <div className="text-center relative z-30 mt-8">
         <h1 className="text-3xl md:text-5xl font-extrabold text-white tracking-wide">
-          Hi, I'm <span className="text-[#87bdd8]">Tanush Saha</span>
+          Hi, I am <span className="text-[#87bdd8]">Tanush Saha</span>
         </h1>
         <p className="mt-4 text-neutral-300 text-base md:text-lg max-w-xl mx-auto leading-relaxed">
           A passionate{" "}

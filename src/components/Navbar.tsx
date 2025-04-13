@@ -1,18 +1,6 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
-import {
-  Navbar,
-  NavBody,
-  NavItems,
-  MobileNav,
-  NavbarLogo,
-  NavbarButton,
-  MobileNavHeader,
-  MobileNavToggle,
-  MobileNavMenu,
-} from "@/components/ui/resizable-navbar";
-
+import React, { useEffect, useState } from "react";
 
 const navItems = [
   {
@@ -29,75 +17,85 @@ const navItems = [
   },
 ];
 
-
-
 const NavbarPage = () => {
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  
+
+
+
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-
-
     <div>
-      <Navbar>
+      <nav className="bg-gradient-to-r from-black to-gray-800 p-4">
+        <div className="max-w-[1200px] mx-auto flex justify-between items-center">
+          <Link href="/" className="text-white text-2xl font-semibold">
+            Tanush
+          </Link>
 
-        <NavBody>
-          <NavbarLogo />
-          <NavItems items={navItems} />
+        
+          <div className="hidden md:flex gap-8">
+            {navItems.map((item, idx) => (
+              <Link
+                key={idx}
+                href={item.link}
+                className="text-white hover:text-[#87bdd8] transition-colors duration-300"
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
+
+        
           <div className="flex items-center gap-4">
             <Link
               href="/resume.pdf"
               target="download"
               rel="noopener noreferrer"
             >
-              <NavbarButton variant="primary">Download Resume</NavbarButton>
+              <button className="bg-black hover:bg-gray-700 cursor-pointer text-white px-6 py-3 rounded-lg">
+                Download Resume
+              </button>
             </Link>
           </div>
-        </NavBody>
 
-   
-        <MobileNav>
-          <MobileNavHeader>
-            <NavbarLogo />
-            <MobileNavToggle
-              isOpen={isMobileMenuOpen}
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            />
-          </MobileNavHeader>
 
-          <MobileNavMenu
-            isOpen={isMobileMenuOpen}
-            onClose={() => setIsMobileMenuOpen(false)}
+          <button
+            className="md:hidden text-white"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
+            {isMobileMenuOpen ? "Close" : "Menu"}
+          </button>
+        </div>
+
+
+        {isMobileMenuOpen && (
+          <div className="md:hidden bg-black text-white p-4">
             {navItems.map((item, idx) => (
               <Link
-                key={`mobile-link-${idx}`}
+                key={idx}
                 href={item.link}
+                className="block py-2"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="relative text-neutral-600 dark:text-neutral-300"
               >
-                <span className="block text-white">{item.name}</span>
+                {item.name}
               </Link>
             ))}
-            <div className="flex w-full flex-col gap-4">
-              <NavbarButton
+            <div className="flex flex-col gap-4 mt-4">
+              <button
                 onClick={() => setIsMobileMenuOpen(false)}
-                variant="primary"
-                className="w-full"
+                className="w-full bg-[#87bdd8] text-white px-6 py-3 rounded-lg"
               >
                 Login
-              </NavbarButton>
-              <NavbarButton
+              </button>
+              <button
                 onClick={() => setIsMobileMenuOpen(false)}
-                variant="primary"
-                className="w-full"
+                className="w-full bg-[#87bdd8] text-white px-6 py-3 rounded-lg"
               >
                 Book a call
-              </NavbarButton>
+              </button>
             </div>
-          </MobileNavMenu>
-        </MobileNav>
-      </Navbar>
+          </div>
+        )}
+      </nav>
     </div>
   );
 };
