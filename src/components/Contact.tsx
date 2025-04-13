@@ -47,14 +47,14 @@ const Contact = () => {
         <p className="text-white/70 mb-6">Send me a message</p>
 
         <form
-        onSubmit={clearForm}
+          onSubmit={clearForm}
           className="space-y-4"
-          action="https://getform.io/f/aejrdkxb"
+          action="https://getform.io/f/bgdpgkga"
           method="POST"
         >
           <div className="grid md:grid-cols-2 gap-4">
             <input
-              className="bg-[#87bdd8]/20 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-[#87bdd8]"
+              className="bg-[#87bdd8]/20 border border-transparent rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-[#87bdd8]"
               placeholder="Enter Your Name"
               type="text"
               name="name"
@@ -63,7 +63,7 @@ const Contact = () => {
               onChange={(e) => setName(e.target.value)}
             />
             <input
-              className="bg-[#87bdd8]/20 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-[#87bdd8]"
+              className="bg-[#87bdd8]/20 border border-transparent rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-[#87bdd8]"
               placeholder="Email"
               type="email"
               name="email"
@@ -72,7 +72,7 @@ const Contact = () => {
               onChange={(e) => setEmail(e.target.value)}
             />
             <input
-              className="bg-[#87bdd8]/20 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-[#87bdd8] md:col-span-2"
+              className="bg-[#87bdd8]/20 border border-transparent rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-[#87bdd8] md:col-span-2"
               placeholder="Phone"
               type="tel"
               name="phone"
@@ -85,7 +85,7 @@ const Contact = () => {
             name="message"
             cols={30}
             rows={6}
-            className="bg-[#87bdd8]/20 w-full rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-[#87bdd8]"
+            className="bg-[#87bdd8]/20 border border-transparent w-full rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-[#87bdd8]"
             placeholder="Your Message"
             required
             value={area}

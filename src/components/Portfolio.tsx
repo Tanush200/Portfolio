@@ -4,10 +4,11 @@ import proj1 from "@/assets/proj-1.png";
 import proj2 from "@/assets/proj-2.png";
 import proj3 from "@/assets/proj-3.png";
 import proj4 from "@/assets/proj-4.png";
-import proj5 from "@/assets/proj-5.png";
+import proj6 from "@/assets/proj-6.png";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { Cover } from "./ui/cover";
 import {
   SiNextdotjs,
   SiTypescript,
@@ -37,7 +38,7 @@ const projects = [
       "📝 A Portfolio application built with Next.js TypeScript and Tailwind Css.",
     techstack: "Next.js TypeScript and Tailwind Css",
     link: "https://github.com/Tanush200/Portfolio",
-    src: proj5,
+    src: proj6,
     icons: [SiNextdotjs, SiTypescript, SiTailwindcss],
   },
   {
@@ -72,13 +73,11 @@ const projects = [
 const Portfolio = () => {
   return (
     <div
-      className="text-white bg-gradient-to-b from-[#121c2c] to-[#3e5c76] py-28 px-6"
+      className="text-white bg-gradient-to-b from-black via-[#111] to-[#1a1a1a] py-28 px-6"
       id="portfolio"
     >
       <h2 className="text-4xl md:text-5xl font-bold text-center tracking-tight mb-20">
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#87bdd8] to-[#a8d0e6]">
-          Projects
-        </span>
+       <Cover>PROJECTS</Cover>
       </h2>
 
       <div className="max-w-[1100px] mx-auto space-y-32">
@@ -121,7 +120,6 @@ const Portfolio = () => {
                 Link
               </Link>
             </div>
-
 
             <div className="md:w-1/2 flex justify-center">
               <div className="relative rounded-xl overflow-hidden group border-2 border-[#87bdd8] hover:shadow-xl transition-all duration-300">
