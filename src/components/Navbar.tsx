@@ -55,7 +55,7 @@ const NavbarPage = () => {
           </div>
         </NavBody>
 
-        {/* Mobile Navigation */}
+   
         <MobileNav>
           <MobileNavHeader>
             <NavbarLogo />

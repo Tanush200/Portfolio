@@ -49,13 +49,11 @@ const Skills = () => {
       <div className="text-white max-w-[1200px] mx-auto px-6 text-center">
         <h2 className="text-5xl md:text-6xl font-bold mb-4">MY SKILLS</h2>
         <div className="w-[40rem] h-40 relative ml-65">
-          {/* Gradients */}
+          
           <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
           <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
           <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-1/4 blur-sm" />
           <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" />
-
-          {/* Core component */}
           <SparklesCore
             background="transparent"
             minSize={0.4}
@@ -65,7 +63,6 @@ const Skills = () => {
             particleColor="#FFFFFF"
           />
 
-          {/* Radial Gradient to prevent sharp edges */}
           <div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
         </div>
         <div className="w-24 h-1 bg-gradient-to-r from-[#70badf] to-[#5c7a9e] rounded-full mx-auto mb-12"></div>
